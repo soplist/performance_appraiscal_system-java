@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="struts2" namespace="/" extends="struts-default,json-default">
+        <action name="insertUserResume" method="insertUserResume" class="userResumeAction">
+            <interceptor-ref name="fileUploadStack"/>
+            <result name="insert_success">/user_management.jsp</result>
+        </action>
+        <action name="getUserResumePhoto" method="getUserResumePhoto" class="userResumeAction"></action>
+        <action name="getAllUserResume" method="getAllUserResume" class="userResumeAction">
+            <result name="get_user_resume_list_success">/user_management.jsp</result>
+        </action>
+    </package>
+</struts>    
